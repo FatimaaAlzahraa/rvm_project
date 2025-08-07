@@ -33,8 +33,7 @@
 - SQLite3 (default, can change to PostgreSQL)
 
 
-### API Endpoints 
-
+### API Endpoints , tsting in postman 
 
 | Endpoint                | Method | Auth | Description                  |
 |-------------------------|--------|------|------------------------------|
@@ -44,8 +43,9 @@
 | `/api/user/summary/`   | GET    | ✅   | View your recycling stats    |
 
 
+
 ### 📦 Installation
-- 1. Clone the repo
+- 1.Clone the repo
 <pre lang="markdown">bash git clone https://github.com/FatimaaAlzahraa/rvm_project.git 
 cd rvm_project </pre>
 
