@@ -43,7 +43,6 @@
 | `/api/user/summary/`   | GET    | ✅   | View your recycling stats    |
 
 
-
 ### 📦 Installation
 - 1.Clone the repo
 <pre lang="markdown">bash git clone https://github.com/FatimaaAlzahraa/rvm_project.git 
@@ -72,3 +71,15 @@ python manage.py migrate </pre>
 - Use it in your headers for all authenticated API calls:
 <pre lang="markdown"> Authorization: Token <your_token_here> </pre>
 
+#### 📥 Register User
+<pre lang="markdown"> POST  http://127.0.0.1:8000/api/auth/register/ </pre>
+
+<pre lang="markdown">
+{
+  "username": "example",
+  "email": "test@example.com",
+  "password": "testpass123",
+  "password_confirm": "testpass123",
+  "phone_number": "0123456789"
+}
+pre>
