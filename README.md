@@ -71,6 +71,7 @@ python manage.py migrate </pre>
 - Use it in your headers for all authenticated API calls:
 <pre lang="markdown"> Authorization: Token <your_token_here> </pre>
 
+
 #### 📥 Register User
 <pre lang="markdown"> POST  http://127.0.0.1:8000/api/auth/register/ </pre>
 
