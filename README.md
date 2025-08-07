@@ -33,4 +33,4 @@
 - SQLite3 (default, can change to PostgreSQL)
 
 
-<pre lang="markdown"> ```bash git clone https://github.com/your-username/rvm_project.git cd rvm_project ``` </pre>
+<pre lang="markdown"> bash git clone https://github.com/your-username/rvm_project.git cd rvm_project </pre>
