@@ -71,6 +71,14 @@ python manage.py migrate </pre>
 - Use it in your headers for all authenticated API calls:
 <pre lang="markdown"> Authorization: Token <your_token_here> </pre>
 
+# add manually RVM in database to test 
+<pre lang="markdown"># Open the Django shell
+python manage.py shell
+ </pre>
+
+<pre lang="markdown"># Run the following in the shell:
+from rvm_app.models import RVM
+RVM.objects.create(machine_id="RVM001", location="Mall Entrance", is_active=True)  </pre>
 
 #### 📥 Register User
 <pre lang="markdown"> POST  http://127.0.0.1:8000/api/auth/register/ </pre>
