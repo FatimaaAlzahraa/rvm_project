@@ -33,7 +33,7 @@
 - SQLite3 (default, can change to PostgreSQL)
 
 
-### API Endpoints , tsting in postman 
+### API Endpoints , testing in postman 
 
 | Endpoint                | Method | Auth | Description                  |
 |-------------------------|--------|------|------------------------------|
