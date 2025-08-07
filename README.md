@@ -82,4 +82,4 @@ python manage.py migrate </pre>
   "password_confirm": "testpass123",
   "phone_number": "0123456789"
 }
-pre>
+ </pre>
