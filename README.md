@@ -83,3 +83,36 @@ python manage.py migrate </pre>
   "phone_number": "0123456789"
 }
  </pre>
+
+
+#### 🔑 Login User
+<pre lang="markdown"> POST  http://127.0.0.1:8000/api/auth/login/ </pre>
+
+<pre lang="markdown">
+{
+  "username": "example",
+  "password": "testpass123"
+}
+</pre>
+
+
+#### ♻️ Create Deposit 
+<pre lang="markdown"> POST  http://127.0.0.1:8000/api/deposits/ </pre>
+
+- Headers:
+<pre lang="markdown"> Authorization: Token <your_token>  </pre>
+
+<pre lang="markdown">
+{
+  "machine_id": "RVM001",
+  "material_type": "plastic",
+  "weight_kg": 2.5
+}
+ </pre>
+
+
+#### 📊 User Summary
+<pre lang="markdown"> GET  http://127.0.0.1:8000/api/user/summary/ </pre>
+
+- Headrs: 
+<pre lang="markdown"> Authorization: Token <your_token>  </pre>
