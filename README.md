@@ -36,24 +36,34 @@
 🔹 User (CustomUser)
 Inherits from AbstractUser
 Adds fields:
-
+<pre lang="markdown">
 phone_number
-
 total_points
+total_weight_recycled 
+</pre>
 
 🔹 RVM machines 
+Represents a physical machine with:
+<pre lang="markdown">
+machine_id
+location
+is_active
+</pre>
 
 🔹 Deposit
+<pre lang="markdown">
 Fields: user, material_type, weight, machine_id, timestamp, points_earned
 Logic: points_earned is automatically calculated based on material and weight.
+</pre>
 
+<pre lang="markdown">
 🔹 MaterialType
 {
     PLASTIC = 'plastic', 'Plastic'
     METAL = 'metal', 'Metal'
     GLASS = 'glass', 'Glass' 
 }
-
+</pre>
 
 
 ### API Endpoints , testing in postman 
