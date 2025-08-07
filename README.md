@@ -1,4 +1,4 @@
-♻️ RVM Project – Recycle Rewards API
+### ♻️ RVM Project – Recycle Rewards API
 This project implements a Reverse Vending Machine (RVM) API that allows users to:
 
 Register/login with authentication tokens
@@ -9,7 +9,7 @@ Earn reward points based on material and weight
 
 View a summary of their recycling activity
 
-🚀 Features
+### 🚀 Features
 ✅ Custom user model using AbstractUser with added fields
 
 🔐 Token-based authentication
