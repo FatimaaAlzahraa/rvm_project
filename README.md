@@ -32,6 +32,29 @@
 
 - SQLite3 (default, can change to PostgreSQL)
 
+### 🧠 Project Logic & Models
+🔹 User (CustomUser)
+Inherits from AbstractUser
+Adds fields:
+
+phone_number
+
+total_points
+
+🔹 RVM machines 
+
+🔹 Deposit
+Fields: user, material_type, weight, machine_id, timestamp, points_earned
+Logic: points_earned is automatically calculated based on material and weight.
+
+🔹 MaterialType
+{
+    PLASTIC = 'plastic', 'Plastic'
+    METAL = 'metal', 'Metal'
+    GLASS = 'glass', 'Glass' 
+}
+
+
 
 ### API Endpoints , testing in postman 
 
