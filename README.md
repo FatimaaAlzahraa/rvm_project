@@ -37,19 +37,19 @@
 <pre lang="markdown">bash git clone https://github.com/FatimaaAlzahraa/rvm_project.git 
 cd rvm_project </pre>
 
-- 2. Create and activate a virtual environment
+- 2.Create and activate a virtual environment
 <pre lang="markdown">python -m venv venv
 venv\Scripts\activate  # On Mac use source venv/bin/activate </pre>
 
-- 3. Install dependencies
+- 3.Install dependencies
 <pre lang="markdown">pip install -r requirements.txt </pre>
 
-- 4. Run migrations
+- 4.Run migrations
 <pre lang="markdown">python manage.py makemigrations
 python manage.py migrate </pre>
 
-- 5. Create superuser (optional)
+- 5.Create superuser (optional)
 <pre lang="markdown"> python manage.py createsuperuser </pre>
 
-- 6. Run the server
+- 6.Run the server
 <pre lang="markdown"> python manage.py runserver </pre>
