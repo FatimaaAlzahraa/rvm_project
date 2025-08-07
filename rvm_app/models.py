@@ -2,9 +2,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from decimal import Decimal
 
-
+# model user use AbstractUser
 class User(AbstractUser):
-    """Extended user model for RVM system"""
     phone_number = models.CharField(max_length=15, blank=True)
     total_points = models.PositiveIntegerField(default=0)
     total_weight_recycled = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
@@ -20,9 +19,8 @@ class User(AbstractUser):
         self.total_weight_recycled += Decimal(str(weight))
         self.save(update_fields=['total_weight_recycled'])
 
-
+# the machines model 
 class RVM(models.Model):
-    """Reverse Vending Machine model"""
     machine_id = models.CharField(max_length=50, unique=True)
     location = models.CharField(max_length=200)
     is_active = models.BooleanField(default=True)
@@ -31,16 +29,14 @@ class RVM(models.Model):
     def __str__(self):
         return f"RVM-{self.machine_id} at {self.location}"
 
-
+#Material types with point values
 class MaterialType(models.TextChoices):
-    """Material types with point values"""
     PLASTIC = 'plastic', 'Plastic'
     METAL = 'metal', 'Metal'
     GLASS = 'glass', 'Glass'
 
-
+#Individual deposit transaction
 class Deposit(models.Model):
-    """Individual deposit transaction"""
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='deposits')
     rvm = models.ForeignKey(RVM, on_delete=models.CASCADE, related_name='deposits')
     material_type = models.CharField(max_length=10, choices=MaterialType.choices, default=MaterialType.PLASTIC)

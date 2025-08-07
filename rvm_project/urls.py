@@ -14,11 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# RVM/urls.py
+# put url root connect the rvm_app
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('rvm_app.urls')),  # Include the app's URLs under '/api/'
+    path('api/', include('rvm_app.urls')),
 ]

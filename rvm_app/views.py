@@ -12,7 +12,7 @@ from .serializers import (
     UserSummarySerializer
 )
 
-
+#first user create your account (register)
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
@@ -20,6 +20,7 @@ def register_user(request):
     serializer = UserRegistrationSerializer(data=request.data)
     if serializer.is_valid():
         user = serializer.save()
+        #your token in your account 
         token, created = Token.objects.get_or_create(user=user)
         return Response({
             'message': 'User registered successfully',
@@ -32,7 +33,7 @@ def register_user(request):
         }, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+# login for the user have already account 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
@@ -52,7 +53,7 @@ def login_user(request):
         })
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+# the deposit your user (machineID , matrial type , and your matrial weight  )
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_deposit(request):
@@ -68,6 +69,8 @@ def create_deposit(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+# your user all matrials added 
+# your total deposits , total weight , how many deposits number , your fav matrial 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def user_summary(request):

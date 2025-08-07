@@ -10,7 +10,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'email', 'password', 'password_confirm', 'phone_number']
-    
+    # confirmation pass 
     def validate(self, data):
         if data['password'] != data['password_confirm']:
             raise serializers.ValidationError("Passwords don't match")
@@ -43,6 +43,7 @@ class DepositSerializer(serializers.ModelSerializer):
         fields = ['material_type', 'weight_kg', 'machine_id', 'points_earned', 'deposited_at']
         read_only_fields = ['points_earned', 'deposited_at']
     
+    # validation the machine ID and matrials weight 
     def validate_machine_id(self, value):
         try:
             rvm = RVM.objects.get(machine_id=value, is_active=True)
@@ -53,7 +54,7 @@ class DepositSerializer(serializers.ModelSerializer):
     def validate_weight_kg(self, value):
         if value <= 0:
             raise serializers.ValidationError("Weight must be positive")
-        if value > 100:  # Reasonable upper limit
+        if value > 100:  # Reasonable upper limit 
             raise serializers.ValidationError("Weight seems too high")
         return value
     
@@ -70,7 +71,8 @@ class UserSummarySerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'total_points', 'total_weight_recycled', 'recent_deposits']
-    
+
+    # just the user show last five deposits  
     def get_recent_deposits(self, obj):
         recent = obj.deposits.all()[:5]
         return DepositSerializer(recent, many=True).data
