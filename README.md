@@ -71,7 +71,7 @@ python manage.py migrate </pre>
 - Use it in your headers for all authenticated API calls:
 <pre lang="markdown"> Authorization: Token <your_token_here> </pre>
 
-### add manually RVM in database to test 
+### add manually RVM in database for testing APIs 
 <pre lang="markdown"># Open the Django shell
 python manage.py shell</pre>
 
