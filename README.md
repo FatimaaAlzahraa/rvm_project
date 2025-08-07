@@ -54,9 +54,8 @@ is_active
 <pre lang="markdown">
 Fields: user, material_type, weight, machine_id, timestamp, points_earned
 Logic: points_earned is automatically calculated based on material and weight.
-</pre>
 
-<pre lang="markdown">
+
 🔹 MaterialType
 {
     PLASTIC = 'plastic', 'Plastic'
