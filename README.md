@@ -10,12 +10,12 @@ Earn reward points based on material and weight
 View a summary of their recycling activity
 
 ### 🚀 Features
-✅ Custom user model using AbstractUser with added fields
+- ✅ Custom user model using AbstractUser with added fields
 
-🔐 Token-based authentication
+- 🔐 Token-based authentication
 
-♻️ Track recyclable material deposits
+- ♻️ Track recyclable material deposits
 
-🏅 Auto-calculate points and update totals
+- 🏅 Auto-calculate points and update totals
 
-📊 User summary: total points, weight, favorite material
+- 📊 User summary: total points, weight, favorite material
