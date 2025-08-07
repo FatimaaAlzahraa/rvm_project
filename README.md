@@ -43,6 +43,7 @@
 | `/api/deposits/`       | POST   | ✅   | Log a new material deposit   |
 | `/api/user/summary/`   | GET    | ✅   | View your recycling stats    |
 
+
 ### 📦 Installation
 - 1. Clone the repo
 <pre lang="markdown">bash git clone https://github.com/FatimaaAlzahraa/rvm_project.git 
@@ -69,5 +70,5 @@ python manage.py migrate </pre>
 **This project uses DRF Token Authentication.** 
 - After registering or logging in, you will receive a token.
 - Use it in your headers for all authenticated API calls:
-
+<pre lang="markdown"> Authorization: Token <your_token_here> </pre>
 
