@@ -53,3 +53,8 @@ python manage.py migrate </pre>
 
 - 6.Run the server
 <pre lang="markdown"> python manage.py runserver </pre>
+
+### 🔐 Authentication
+**This project uses DRF Token Authentication.**
+- After registering or logging in, you will receive a token.
+- Use it in your headers for all authenticated API calls:
